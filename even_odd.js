@@ -1,4 +1,4 @@
-let n = 5;
+let n = 2;
 
 if (n % 2 == 0) {
   console.log('Number is even ' + n);
