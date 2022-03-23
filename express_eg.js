@@ -11,3 +11,8 @@ app.listen(9000, function (err, res) {
 app.get('/', function (req, res) {
   res.send('Heyy');
 });
+
+//get api
+app.get('/alien', function (req, res) {
+  res.send('Hi Alien');
+});
