@@ -16,3 +16,9 @@ app.get('/', function (req, res) {
 app.get('/alien', function (req, res) {
   res.send('Hi Alien');
 });
+
+//To fetch data of particular index
+app.get('/alien/:id', function (req, res) {
+  const id = req.params.id;
+  res.send('hey navin ' + id);
+});
