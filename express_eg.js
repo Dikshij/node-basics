@@ -13,12 +13,20 @@ app.get('/', function (req, res) {
 });
 
 //get api
+/*
 app.get('/alien', function (req, res) {
   res.send('Hi Alien');
 });
+*/
 
 //To fetch data of particular index
 app.get('/alien/:id', function (req, res) {
   const id = req.params.id;
   res.send('hey navin ' + id);
+});
+
+//query api eg /alien?2
+app.get('/alien', function (req, res) {
+  const id = req.query.id;
+  res.send('Hi Alien1' + id);
 });
