@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 rl.question('What do you think of Node.js? ', (answer) => {
   console.log(`Thank you for your valuable feedback: ${answer}`);
   var output = check(answer);
-  if (output == 'true') {
+  if (output == true) {
     console.log('contains vowel');
   } else {
     console.log('no vowel');
@@ -18,11 +18,17 @@ rl.question('What do you think of Node.js? ', (answer) => {
 });
 
 var check = (answer) => {
+  var flag = false;
   for (e in answer) {
     var a = answer[e];
-
-    if (a === 'a' || a === 'e' || a === 'i' || a === 'o' || a === 'u') {
-      return true;
+    if (flag == false) {
+      if (a === 'a' || a === 'e' || a === 'i' || a === 'o' || a === 'u') {
+        flag = true;
+        console.log(flag);
+      }
+    } else {
+      break;
     }
   }
+  return flag;
 };
