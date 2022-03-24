@@ -14,3 +14,5 @@ rl.question('What do you think of Node.js? ', (answer) => {
 function hello(answer) {
   console.log('ff' + answer);
 }
+
+hello1 = () => console.log('hh'); //arrow function
